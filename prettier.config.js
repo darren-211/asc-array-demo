@@ -5,3 +5,4 @@ module.exports = {
     printWidth: 144,
     proseWrap: 'preserve'
 };
+

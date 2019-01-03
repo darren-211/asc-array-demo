@@ -11,5 +11,5 @@ import * as loader from './loader/index.js';
     console.log('Allocated wasm address:', arrPtr);
     const s = Module.sum(arrPtr);
     console.log('The sum of the array: ', s);
-    // Module.freeArray(arrPtr);
+    Module.freeArray(arrPtr);
 })();
