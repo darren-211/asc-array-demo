@@ -1,0 +1,21 @@
+{
+  "name": "asc-array-demo",
+  "version": "0.0.1",
+  "description": "assemblyscript demo",
+  "main": "index.js",
+  "scripts": {
+    "asbuild:dev": "asc assembly/index.ts -b build/main.wasm -t build/main.wat --sourceMap --validate --debug",
+    "asbuild:prod": "asc assembly/index.ts -b build/main.min.wasm --sourceMap --validate --optimize -d build/main.d.ts",
+    "asbuild": "npm run asbuild:dev && npm run asbuild:prod",
+    "start": "rollup -c -w",
+    "build": "rollup -c"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "assemblyscript": "github:AssemblyScript/assemblyscript",
+    "live-server": "^1.2.1"
+  },
+  "dependencies": {
+    "@types/webassembly-js-api": "0.0.2"
+  }
+}
